@@ -14,6 +14,7 @@
 		2B9F20102ADCB6C10092D6C7 /* FigmaActivityGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F200F2ADCB6C10092D6C7 /* FigmaActivityGridTests.swift */; };
 		2B9F201A2ADCB6C10092D6C7 /* FigmaActivityGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F20192ADCB6C10092D6C7 /* FigmaActivityGridUITests.swift */; };
 		2B9F201C2ADCB6C10092D6C7 /* FigmaActivityGridUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F201B2ADCB6C10092D6C7 /* FigmaActivityGridUITestsLaunchTests.swift */; };
+		2BDE8F6B2ADD773D00F29BE9 /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE8F6A2ADD773D00F29BE9 /* Tooltip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		2B9F20152ADCB6C10092D6C7 /* FigmaActivityGridUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FigmaActivityGridUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B9F20192ADCB6C10092D6C7 /* FigmaActivityGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaActivityGridUITests.swift; sourceTree = "<group>"; };
 		2B9F201B2ADCB6C10092D6C7 /* FigmaActivityGridUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaActivityGridUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2BDE8F6A2ADD773D00F29BE9 /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				2B9F1FFD2ADCB6C00092D6C7 /* FigmaActivityGridApp.swift */,
 				2B9F1FFF2ADCB6C00092D6C7 /* ContentView.swift */,
+				2BDE8F6A2ADD773D00F29BE9 /* Tooltip.swift */,
 				2B9F20012ADCB6C10092D6C7 /* Assets.xcassets */,
 				2B9F20062ADCB6C10092D6C7 /* FigmaActivityGrid.entitlements */,
 				2B9F20032ADCB6C10092D6C7 /* Preview Content */,
@@ -261,6 +264,7 @@
 			files = (
 				2B9F20002ADCB6C00092D6C7 /* ContentView.swift in Sources */,
 				2B9F1FFE2ADCB6C00092D6C7 /* FigmaActivityGridApp.swift in Sources */,
+				2BDE8F6B2ADD773D00F29BE9 /* Tooltip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

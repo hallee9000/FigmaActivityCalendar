@@ -11,10 +11,27 @@ import AppKit
 class WorkspaceNotificationObserver: NSObject {
     @objc func handleWorkspaceNotification(_ notification: Notification) {
         if let activatedApp = notification.userInfo?[NSWorkspace.applicationUserInfoKey] as? NSRunningApplication {
-            print(activatedApp.localizedName ?? "dd")
-            // 在这里添加处理窗口激活事件的逻辑
+            if activatedApp.localizedName=="Figma" {
+                upsertFile()
+            }
         }
     }
+}
+
+func upsertFile () {
+    let str = "Super long string here"
+    let filename = getDocumentsDirectory().appendingPathComponent("output.txt")
+    print(filename)
+    do {
+        try str.write(to: filename, atomically: true, encoding: String.Encoding.utf8)
+    } catch {
+        // failed to write file – bad permissions, bad filename, missing permissions, or more likely it can't be converted to the encoding
+    }
+}
+
+func getDocumentsDirectory() -> URL {
+    let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+    return paths[0]
 }
 
 struct ContentView: View {
@@ -31,20 +48,27 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Figma Activity")
-            VStack {
-                ForEach(0..<5) { row in
-                    HStack {
-                        ForEach(0..<7) { column in
-                            Rectangle()
-                                .frame(width: 8, height: 8)
-                                .cornerRadius(2)
+            VStack (spacing: 4) {
+                ForEach(0..<7) { row in
+                    HStack (spacing: 4) {
+                        ForEach(0..<20) { column in
+                            UnevenRoundedRectangle(
+                                cornerRadii: RectangleCornerRadii(topLeading: 5, bottomLeading: 5,bottomTrailing: 5,topTrailing: 2)
+                            )
+                                .frame(width: 10, height: 10)
                                 .foregroundColor(.blue)
+                                .opacity(opacityValue())
+                                .toolTip("9.2 hours on Sunday, June 18, 2022")
                         }
                     }
                 }
             }
         }
         .padding()
+    }
+    func opacityValue() -> Double {
+        let opacity = Double.random(in: 0..<1)
+        return opacity
     }
 }
 
