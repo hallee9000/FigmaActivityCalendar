@@ -1,17 +1,22 @@
 //
-//  FigmaActivityGridApp.swift
-//  FigmaActivityGrid
+//  ResizeWindowApp.swift
+//  ResizeWindow
 //
-//  Created by 李俊 on 2023/10/16.
+//  Created by Hal on 2023/9/26.
 //
 
 import SwiftUI
 
 @main
-struct FigmaActivityGridApp: App {
+struct ResizeWindowApp: App {
     var body: some Scene {
-        WindowGroup {
+        MenuBarExtra(content: {
             ContentView()
-        }
+        }, label: {
+            HStack {
+                Image(systemName: "bolt.horizontal.circle")
+            }
+        })
+        .menuBarExtraStyle(.window)
     }
 }
