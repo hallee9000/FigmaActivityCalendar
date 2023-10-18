@@ -15,6 +15,7 @@
 		2B9F201A2ADCB6C10092D6C7 /* FigmaActivityGridUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F20192ADCB6C10092D6C7 /* FigmaActivityGridUITests.swift */; };
 		2B9F201C2ADCB6C10092D6C7 /* FigmaActivityGridUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9F201B2ADCB6C10092D6C7 /* FigmaActivityGridUITestsLaunchTests.swift */; };
 		2BDE8F6B2ADD773D00F29BE9 /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE8F6A2ADD773D00F29BE9 /* Tooltip.swift */; };
+		2BDE8F6D2ADEA40300F29BE9 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDE8F6C2ADEA40300F29BE9 /* utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		2B9F20192ADCB6C10092D6C7 /* FigmaActivityGridUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaActivityGridUITests.swift; sourceTree = "<group>"; };
 		2B9F201B2ADCB6C10092D6C7 /* FigmaActivityGridUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaActivityGridUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2BDE8F6A2ADD773D00F29BE9 /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
+		2BDE8F6C2ADEA40300F29BE9 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		2BDE8F6E2ADEAEE300F29BE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +100,11 @@
 		2B9F1FFC2ADCB6C00092D6C7 /* FigmaActivityGrid */ = {
 			isa = PBXGroup;
 			children = (
+				2BDE8F6E2ADEAEE300F29BE9 /* Info.plist */,
 				2B9F1FFD2ADCB6C00092D6C7 /* FigmaActivityGridApp.swift */,
 				2B9F1FFF2ADCB6C00092D6C7 /* ContentView.swift */,
 				2BDE8F6A2ADD773D00F29BE9 /* Tooltip.swift */,
+				2BDE8F6C2ADEA40300F29BE9 /* utils.swift */,
 				2B9F20012ADCB6C10092D6C7 /* Assets.xcassets */,
 				2B9F20062ADCB6C10092D6C7 /* FigmaActivityGrid.entitlements */,
 				2B9F20032ADCB6C10092D6C7 /* Preview Content */,
@@ -265,6 +270,7 @@
 				2B9F20002ADCB6C00092D6C7 /* ContentView.swift in Sources */,
 				2B9F1FFE2ADCB6C00092D6C7 /* FigmaActivityGridApp.swift in Sources */,
 				2BDE8F6B2ADD773D00F29BE9 /* Tooltip.swift in Sources */,
+				2BDE8F6D2ADEA40300F29BE9 /* utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = FigmaActivityGrid/FigmaActivityGrid.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -431,6 +438,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FigmaActivityGrid/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FigmaActivityGrid/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = FigmaActivityGrid/FigmaActivityGrid.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -456,6 +465,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FigmaActivityGrid/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FigmaActivityGrid/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
