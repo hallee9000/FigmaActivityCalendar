@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BB850772AE7E4FB00037860 /* FigmaActivityCalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850762AE7E4FB00037860 /* FigmaActivityCalendarApp.swift */; };
+		2BB850792AE7E4FB00037860 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850782AE7E4FB00037860 /* ContentView.swift */; };
+		2BB8507B2AE7E4FC00037860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB8507A2AE7E4FC00037860 /* Assets.xcassets */; };
+		2BB8507E2AE7E4FC00037860 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB8507D2AE7E4FC00037860 /* Preview Assets.xcassets */; };
+		2BB850892AE7E4FC00037860 /* FigmaActivityCalendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850882AE7E4FC00037860 /* FigmaActivityCalendarTests.swift */; };
+		2BB850932AE7E4FC00037860 /* FigmaActivityCalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850922AE7E4FC00037860 /* FigmaActivityCalendarUITests.swift */; };
+		2BB850952AE7E4FC00037860 /* FigmaActivityCalendarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850942AE7E4FC00037860 /* FigmaActivityCalendarUITestsLaunchTests.swift */; };
+		2BB850A22AE7E56A00037860 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850A12AE7E56A00037860 /* Tile.swift */; };
+		2BB850A42AE7E5B400037860 /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850A32AE7E5B400037860 /* Tooltip.swift */; };
+		2BB850A62AE7E60500037860 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850A52AE7E60500037860 /* utils.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BB850852AE7E4FC00037860 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BB8506B2AE7E4FB00037860 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BB850722AE7E4FB00037860;
+			remoteInfo = FigmaActivityCalendar;
+		};
+		2BB8508F2AE7E4FC00037860 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BB8506B2AE7E4FB00037860 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BB850722AE7E4FB00037860;
+			remoteInfo = FigmaActivityCalendar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BB850732AE7E4FB00037860 /* FigmaActivityCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FigmaActivityCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB850762AE7E4FB00037860 /* FigmaActivityCalendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaActivityCalendarApp.swift; sourceTree = "<group>"; };
+		2BB850782AE7E4FB00037860 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2BB8507A2AE7E4FC00037860 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2BB8507D2AE7E4FC00037860 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2BB8507F2AE7E4FC00037860 /* FigmaActivityCalendar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FigmaActivityCalendar.entitlements; sourceTree = "<group>"; };
+		2BB850842AE7E4FC00037860 /* FigmaActivityCalendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FigmaActivityCalendarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB850882AE7E4FC00037860 /* FigmaActivityCalendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaActivityCalendarTests.swift; sourceTree = "<group>"; };
+		2BB8508E2AE7E4FC00037860 /* FigmaActivityCalendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FigmaActivityCalendarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB850922AE7E4FC00037860 /* FigmaActivityCalendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaActivityCalendarUITests.swift; sourceTree = "<group>"; };
+		2BB850942AE7E4FC00037860 /* FigmaActivityCalendarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaActivityCalendarUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2BB850A12AE7E56A00037860 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		2BB850A32AE7E5B400037860 /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
+		2BB850A52AE7E60500037860 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BB850702AE7E4FB00037860 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB850812AE7E4FC00037860 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB8508B2AE7E4FC00037860 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BB8506A2AE7E4FB00037860 = {
+			isa = PBXGroup;
+			children = (
+				2BB850752AE7E4FB00037860 /* FigmaActivityCalendar */,
+				2BB850872AE7E4FC00037860 /* FigmaActivityCalendarTests */,
+				2BB850912AE7E4FC00037860 /* FigmaActivityCalendarUITests */,
+				2BB850742AE7E4FB00037860 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2BB850742AE7E4FB00037860 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BB850732AE7E4FB00037860 /* FigmaActivityCalendar.app */,
+				2BB850842AE7E4FC00037860 /* FigmaActivityCalendarTests.xctest */,
+				2BB8508E2AE7E4FC00037860 /* FigmaActivityCalendarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BB850752AE7E4FB00037860 /* FigmaActivityCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				2BB850762AE7E4FB00037860 /* FigmaActivityCalendarApp.swift */,
+				2BB850A12AE7E56A00037860 /* Tile.swift */,
+				2BB850A32AE7E5B400037860 /* Tooltip.swift */,
+				2BB850A52AE7E60500037860 /* utils.swift */,
+				2BB850782AE7E4FB00037860 /* ContentView.swift */,
+				2BB8507A2AE7E4FC00037860 /* Assets.xcassets */,
+				2BB8507F2AE7E4FC00037860 /* FigmaActivityCalendar.entitlements */,
+				2BB8507C2AE7E4FC00037860 /* Preview Content */,
+			);
+			path = FigmaActivityCalendar;
+			sourceTree = "<group>";
+		};
+		2BB8507C2AE7E4FC00037860 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2BB8507D2AE7E4FC00037860 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2BB850872AE7E4FC00037860 /* FigmaActivityCalendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				2BB850882AE7E4FC00037860 /* FigmaActivityCalendarTests.swift */,
+			);
+			path = FigmaActivityCalendarTests;
+			sourceTree = "<group>";
+		};
+		2BB850912AE7E4FC00037860 /* FigmaActivityCalendarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2BB850922AE7E4FC00037860 /* FigmaActivityCalendarUITests.swift */,
+				2BB850942AE7E4FC00037860 /* FigmaActivityCalendarUITestsLaunchTests.swift */,
+			);
+			path = FigmaActivityCalendarUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BB850722AE7E4FB00037860 /* FigmaActivityCalendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BB850982AE7E4FC00037860 /* Build configuration list for PBXNativeTarget "FigmaActivityCalendar" */;
+			buildPhases = (
+				2BB8506F2AE7E4FB00037860 /* Sources */,
+				2BB850702AE7E4FB00037860 /* Frameworks */,
+				2BB850712AE7E4FB00037860 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FigmaActivityCalendar;
+			productName = FigmaActivityCalendar;
+			productReference = 2BB850732AE7E4FB00037860 /* FigmaActivityCalendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BB850832AE7E4FC00037860 /* FigmaActivityCalendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BB8509B2AE7E4FC00037860 /* Build configuration list for PBXNativeTarget "FigmaActivityCalendarTests" */;
+			buildPhases = (
+				2BB850802AE7E4FC00037860 /* Sources */,
+				2BB850812AE7E4FC00037860 /* Frameworks */,
+				2BB850822AE7E4FC00037860 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BB850862AE7E4FC00037860 /* PBXTargetDependency */,
+			);
+			name = FigmaActivityCalendarTests;
+			productName = FigmaActivityCalendarTests;
+			productReference = 2BB850842AE7E4FC00037860 /* FigmaActivityCalendarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BB8508D2AE7E4FC00037860 /* FigmaActivityCalendarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BB8509E2AE7E4FC00037860 /* Build configuration list for PBXNativeTarget "FigmaActivityCalendarUITests" */;
+			buildPhases = (
+				2BB8508A2AE7E4FC00037860 /* Sources */,
+				2BB8508B2AE7E4FC00037860 /* Frameworks */,
+				2BB8508C2AE7E4FC00037860 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BB850902AE7E4FC00037860 /* PBXTargetDependency */,
+			);
+			name = FigmaActivityCalendarUITests;
+			productName = FigmaActivityCalendarUITests;
+			productReference = 2BB8508E2AE7E4FC00037860 /* FigmaActivityCalendarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BB8506B2AE7E4FB00037860 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					2BB850722AE7E4FB00037860 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					2BB850832AE7E4FC00037860 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 2BB850722AE7E4FB00037860;
+					};
+					2BB8508D2AE7E4FC00037860 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 2BB850722AE7E4FB00037860;
+					};
+				};
+			};
+			buildConfigurationList = 2BB8506E2AE7E4FB00037860 /* Build configuration list for PBXProject "FigmaActivityCalendar" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BB8506A2AE7E4FB00037860;
+			productRefGroup = 2BB850742AE7E4FB00037860 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BB850722AE7E4FB00037860 /* FigmaActivityCalendar */,
+				2BB850832AE7E4FC00037860 /* FigmaActivityCalendarTests */,
+				2BB8508D2AE7E4FC00037860 /* FigmaActivityCalendarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BB850712AE7E4FB00037860 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB8507E2AE7E4FC00037860 /* Preview Assets.xcassets in Resources */,
+				2BB8507B2AE7E4FC00037860 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB850822AE7E4FC00037860 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB8508C2AE7E4FC00037860 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BB8506F2AE7E4FB00037860 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB850A62AE7E60500037860 /* utils.swift in Sources */,
+				2BB850A22AE7E56A00037860 /* Tile.swift in Sources */,
+				2BB850792AE7E4FB00037860 /* ContentView.swift in Sources */,
+				2BB850772AE7E4FB00037860 /* FigmaActivityCalendarApp.swift in Sources */,
+				2BB850A42AE7E5B400037860 /* Tooltip.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB850802AE7E4FC00037860 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB850892AE7E4FC00037860 /* FigmaActivityCalendarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BB8508A2AE7E4FC00037860 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BB850952AE7E4FC00037860 /* FigmaActivityCalendarUITestsLaunchTests.swift in Sources */,
+				2BB850932AE7E4FC00037860 /* FigmaActivityCalendarUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BB850862AE7E4FC00037860 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BB850722AE7E4FB00037860 /* FigmaActivityCalendar */;
+			targetProxy = 2BB850852AE7E4FC00037860 /* PBXContainerItemProxy */;
+		};
+		2BB850902AE7E4FC00037860 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BB850722AE7E4FB00037860 /* FigmaActivityCalendar */;
+			targetProxy = 2BB8508F2AE7E4FC00037860 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2BB850962AE7E4FC00037860 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2BB850972AE7E4FC00037860 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		2BB850992AE7E4FC00037860 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FigmaActivityCalendar/FigmaActivityCalendar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FigmaActivityCalendar/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heronhq.FigmaActivityCalendar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2BB8509A2AE7E4FC00037860 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FigmaActivityCalendar/FigmaActivityCalendar.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FigmaActivityCalendar/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heronhq.FigmaActivityCalendar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2BB8509C2AE7E4FC00037860 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heronhq.FigmaActivityCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FigmaActivityCalendar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FigmaActivityCalendar";
+			};
+			name = Debug;
+		};
+		2BB8509D2AE7E4FC00037860 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heronhq.FigmaActivityCalendarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FigmaActivityCalendar.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FigmaActivityCalendar";
+			};
+			name = Release;
+		};
+		2BB8509F2AE7E4FC00037860 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heronhq.FigmaActivityCalendarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = FigmaActivityCalendar;
+			};
+			name = Debug;
+		};
+		2BB850A02AE7E4FC00037860 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.heronhq.FigmaActivityCalendarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = FigmaActivityCalendar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BB8506E2AE7E4FB00037860 /* Build configuration list for PBXProject "FigmaActivityCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BB850962AE7E4FC00037860 /* Debug */,
+				2BB850972AE7E4FC00037860 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BB850982AE7E4FC00037860 /* Build configuration list for PBXNativeTarget "FigmaActivityCalendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BB850992AE7E4FC00037860 /* Debug */,
+				2BB8509A2AE7E4FC00037860 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BB8509B2AE7E4FC00037860 /* Build configuration list for PBXNativeTarget "FigmaActivityCalendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BB8509C2AE7E4FC00037860 /* Debug */,
+				2BB8509D2AE7E4FC00037860 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BB8509E2AE7E4FC00037860 /* Build configuration list for PBXNativeTarget "FigmaActivityCalendarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BB8509F2AE7E4FC00037860 /* Debug */,
+				2BB850A02AE7E4FC00037860 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BB8506B2AE7E4FB00037860 /* Project object */;
+}

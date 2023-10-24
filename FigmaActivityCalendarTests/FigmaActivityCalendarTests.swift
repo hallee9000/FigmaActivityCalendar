@@ -1,14 +1,14 @@
 //
-//  FigmaActivityGridTests.swift
-//  FigmaActivityGridTests
+//  FigmaActivityCalendarTests.swift
+//  FigmaActivityCalendarTests
 //
-//  Created by 李俊 on 2023/10/16.
+//  Created by 李俊 on 2023/10/24.
 //
 
 import XCTest
-@testable import FigmaActivityGrid
+@testable import FigmaActivityCalendar
 
-final class FigmaActivityGridTests: XCTestCase {
+final class FigmaActivityCalendarTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

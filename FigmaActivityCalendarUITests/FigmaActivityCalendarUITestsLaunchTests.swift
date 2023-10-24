@@ -1,13 +1,13 @@
 //
-//  FigmaActivityGridUITestsLaunchTests.swift
-//  FigmaActivityGridUITests
+//  FigmaActivityCalendarUITestsLaunchTests.swift
+//  FigmaActivityCalendarUITests
 //
-//  Created by 李俊 on 2023/10/16.
+//  Created by 李俊 on 2023/10/24.
 //
 
 import XCTest
 
-final class FigmaActivityGridUITestsLaunchTests: XCTestCase {
+final class FigmaActivityCalendarUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

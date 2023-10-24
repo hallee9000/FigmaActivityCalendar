@@ -1,6 +1,6 @@
 //
-//  ResizeWindowApp.swift
-//  ResizeWindow
+//  FigmaActivityCalendarApp.swift
+//  FigmaActivityCalendar
 //
 //  Created by Hal on 2023/9/26.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct ResizeWindowApp: App {
+struct FigmaActivityCalendar: App {
     var body: some Scene {
         MenuBarExtra(content: {
             ContentView()
