@@ -2,14 +2,14 @@
 
 The Figma Activity Calendar is a menu application designed to monitor and track the amount of time you spend using Figma.
 
-![Screenshot of Figma Activity Calendar](images/screenshot.png)
+<img alt="Screenshot of Figma Activity Calendar" src="images/screenshot.png" width="320">
 
 ## How does it work?
 This app will monitor when you activate the Figma window and how much time you spend in it. It will render a heatmap from this data.
 
 All your data is stored in local. You can find it by clicking `Show usage in Finder` in the settings popover.
 
-![Show usage data in Finder](images/usage-data.png)
+<img alt="Show usage data in Finder" src="images/usage-data.png" width="320">
 
 ## What's the rules for tiles' color?
 There are 5 levels for the color.
