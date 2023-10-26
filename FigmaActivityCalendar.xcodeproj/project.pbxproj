@@ -17,6 +17,7 @@
 		2BB850A22AE7E56A00037860 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850A12AE7E56A00037860 /* Tile.swift */; };
 		2BB850A42AE7E5B400037860 /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850A32AE7E5B400037860 /* Tooltip.swift */; };
 		2BB850A62AE7E60500037860 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850A52AE7E60500037860 /* utils.swift */; };
+		2BFE41982AE91418005764F4 /* Popover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE41972AE91418005764F4 /* Popover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		2BB850A12AE7E56A00037860 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		2BB850A32AE7E5B400037860 /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
 		2BB850A52AE7E60500037860 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		2BFE41972AE91418005764F4 /* Popover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popover.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				2BB850762AE7E4FB00037860 /* FigmaActivityCalendarApp.swift */,
 				2BB850A12AE7E56A00037860 /* Tile.swift */,
+				2BFE41972AE91418005764F4 /* Popover.swift */,
 				2BB850A32AE7E5B400037860 /* Tooltip.swift */,
 				2BB850A52AE7E60500037860 /* utils.swift */,
 				2BB850782AE7E4FB00037860 /* ContentView.swift */,
@@ -269,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BB850A62AE7E60500037860 /* utils.swift in Sources */,
+				2BFE41982AE91418005764F4 /* Popover.swift in Sources */,
 				2BB850A22AE7E56A00037860 /* Tile.swift in Sources */,
 				2BB850792AE7E4FB00037860 /* ContentView.swift in Sources */,
 				2BB850772AE7E4FB00037860 /* FigmaActivityCalendarApp.swift in Sources */,

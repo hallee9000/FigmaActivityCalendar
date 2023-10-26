@@ -13,9 +13,14 @@ struct FigmaActivityCalendar: App {
         MenuBarExtra(content: {
             ContentView()
         }, label: {
-            HStack {
-                Image(systemName: "bolt.horizontal.circle")
-            }
+            let image: NSImage = {
+                let ratio = $0.size.height / $0.size.width
+                $0.size.height = 18
+                $0.size.width = 18 / ratio
+                return $0
+            }(NSImage(named: "MenuBarIcon")!)
+
+            Image(nsImage: image)
         })
         .menuBarExtraStyle(.window)
     }

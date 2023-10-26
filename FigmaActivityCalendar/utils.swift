@@ -29,7 +29,7 @@ class WorkspaceNotificationObserver: NSObject {
 }
 
 func handleDailyUsageFile (prevApp: String, currentApp: String) {
-    if prevApp != "Figma" && currentApp != "Figma" {
+    if prevApp != "Figma" && currentApp != "Figma" && prevApp != "Figma Beta" && currentApp != "Figma Beta" {
         return
     }
     // 先统计一下过往的数据
@@ -119,7 +119,7 @@ func calcFigmaUsageTime (filePath: String) {
             if columns.count >= 2 {
                 let timeString = columns[0]
                 let app = columns[1]
-                if previousApp == "Figma" {
+                if previousApp == "Figma" || previousApp == "Figma Beta" {
                     if let time = formatter.date(from: timeString) {
                         if let previousTimeString = previousTime, let previousDate = formatter.date(from: previousTimeString) {
                             let timeInterval = time.timeIntervalSince(previousDate)
