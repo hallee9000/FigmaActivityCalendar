@@ -80,7 +80,9 @@ struct ContentView: View {
         .padding()
         .onAppear {
             let name = UserDefaults.standard.value(forKey: "Name")
-            self.name = name as! String
+            if (name != nil) {
+                self.name = name as! String
+            }
             shapes = getInitialShapes()
             NotificationCenter.default.addObserver(
                 forName: NSWindow.didChangeOcclusionStateNotification, object: nil, queue: nil

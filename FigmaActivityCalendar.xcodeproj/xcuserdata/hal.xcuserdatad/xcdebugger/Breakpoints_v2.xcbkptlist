@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "47816FF2-D3DF-4D1A-88BD-1BD3A72D3C65"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D9AE0E2-EE97-444F-8B6B-1DEA89C4288D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FigmaActivityCalendar/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "9D9AE0E2-EE97-444F-8B6B-1DEA89C4288D - c61da31f24b567c5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FigmaActivityCalendar.ContentView.body.getter : some"
+                  moduleName = "FigmaActivityCalendar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hal/swift/FigmaActivityCalendar/FigmaActivityCalendar/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "544">
+               </Location>
+               <Location
+                  uuid = "9D9AE0E2-EE97-444F-8B6B-1DEA89C4288D - 62dad53938580603"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, SwiftUI.Text, SwiftUI.Spacer, FigmaActivityCalendar.Popover)&gt;&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.HStack&lt;SwiftUI.ForEach&lt;Swift.Range&lt;Swift.Int&gt;, Swift.Int, SwiftUI.VStack&lt;SwiftUI.ForEach&lt;Swift.Range&lt;Swift.Int&gt;, Swift.Int, FigmaActivityCalendar.Tile&gt;&gt;&gt;&gt;, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.buttonStyle&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.PrimitiveButtonStyle&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0, SwiftUI.Spacer, &lt;&lt;opaque return type of SwiftUI.View.keyboardShortcut(_: SwiftUI.KeyEquivalent, modifiers: SwiftUI.EventModifiers) -&gt; some&gt;&gt;.0)&gt;&gt;)&gt; in FigmaActivityCalendar.ContentView.body.getter : some"
+                  moduleName = "FigmaActivityCalendar"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hal/swift/FigmaActivityCalendar/FigmaActivityCalendar/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "716">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
