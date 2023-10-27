@@ -2,7 +2,7 @@
 
 The Figma Activity Calendar is a menu application designed to monitor and track the amount of time you spend using Figma.
 
-<img alt="Screenshot of Figma Activity Calendar" src="images/screenshots.png" width="500">
+<img alt="Screenshot of Figma Activity Calendar" src="images/screenshots.png" width="680">
 
 ## Requirements
 Minimum macOS version 13.0.0 (Ventura)
