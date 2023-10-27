@@ -29,7 +29,7 @@ class WorkspaceNotificationObserver: NSObject {
 }
 
 func handleDailyUsageFile (prevApp: String, currentApp: String) {
-    if prevApp != "Figma" && currentApp != "Figma" && prevApp != "Figma Beta" && currentApp != "Figma Beta" {
+    if !isFigmaApp(appName: prevApp) && !isFigmaApp(appName: currentApp) {
         return
     }
     // 先统计一下过往的数据
@@ -99,59 +99,75 @@ func handleUsageFile () {
 }
 
 func calcFigmaUsageTime (filePath: String) {
-    let pastUsageFilePath = getDocumentsDirectory().appendingPathComponent(filePath)
+    let usageDurations = getUsageDurationsFromCSV(filePath: filePath)
     let usageFile = getDocumentsDirectory().appendingPathComponent("usage.csv")
+    let earliest: String = usageDurations[0].timeString
+    let latest: String = usageDurations[usageDurations.count-1].timeString
+    // 统计 Figma 的使用时长
+    var figmaUsageTime: TimeInterval = 0
+    var previousTime: String?
+    let formatter = DateFormatter()
+    formatter.dateFormat = "HH:mm:ss"
+    for usageDuration in usageDurations {
+        let timeString = usageDuration.timeString
+        let appName = usageDuration.appName
+        if !isFigmaApp(appName: appName) {
+            if let time = formatter.date(from: timeString) {
+                if let previousTimeString = previousTime, let previousDate = formatter.date(from: previousTimeString) {
+                    let timeInterval = time.timeIntervalSince(previousDate)
+                    figmaUsageTime += timeInterval
+                }
+            }
+        }
+        previousTime = timeString
+    }
+    let usageData = "\(removeExt(fileName: filePath)),\(figmaUsageTime),\(earliest),\(latest)\n"
+    // 把统计时长写入 usage.csv
+    if let fileHandle = FileHandle(forWritingAtPath: usageFile.path) {
+        fileHandle.seekToEndOfFile()
+        if let contentData = usageData.data(using: .utf8) {
+            fileHandle.write(contentData)
+            fileHandle.closeFile()
+        } else {
+            print("Failed to convert content to data.")
+        }
+    } else {
+        print("Failed to open file for writing.")
+    }
+}
+
+struct UsageDuration {
+    let timeString: String
+    var appName: String
+}
+
+func getUsageDurationsFromCSV (filePath: String) -> [UsageDuration] {
+    var usageDurations:[UsageDuration] = []
+    let pastUsageFilePath = getDocumentsDirectory().appendingPathComponent(filePath)
     // 读取 CSV 文件内容
     do {
         let fileContents = try String(contentsOfFile: pastUsageFilePath.path, encoding: .utf8)
         // 将文件内容按行拆分
         let rows = fileContents.components(separatedBy: .newlines)
-        // 统计 Figma 的使用时长
-        var figmaUsageTime: TimeInterval = 0
-        var previousTime: String?
-        var previousApp: String?
-        var earliest: String?
-        var latest: String?
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm:ss"
         for row in rows {
-            let columns = row.components(separatedBy: ",")
-            if columns.count >= 2 {
-                let timeString = columns[0]
-                let app = columns[1]
-                if previousApp == "Figma" || previousApp == "Figma Beta" {
-                    if let time = formatter.date(from: timeString) {
-                        if let previousTimeString = previousTime, let previousDate = formatter.date(from: previousTimeString) {
-                            let timeInterval = time.timeIntervalSince(previousDate)
-                            figmaUsageTime += timeInterval
-                        }
-                    }
-                }
-                if (earliest == nil) {
-                    earliest = timeString
-                }
-                latest = timeString
-                previousTime = timeString
-                previousApp = app
+            if row != "" {
+                let columns = row.components(separatedBy: ",")
+                let usageDuration = UsageDuration(timeString: columns[0], appName: columns[1])
+                usageDurations.append(usageDuration)
             }
-        }
-        let usageData = "\(removeExt(fileName: filePath)),\(figmaUsageTime),\(earliest!),\(latest!)\n"
-        // 把统计时长写入 usage.csv
-        if let fileHandle = FileHandle(forWritingAtPath: usageFile.path) {
-            fileHandle.seekToEndOfFile()
-            if let contentData = usageData.data(using: .utf8) {
-                fileHandle.write(contentData)
-                fileHandle.closeFile()
-            } else {
-                print("Failed to convert content to data.")
-            }
-        } else {
-            print("Failed to open file for writing.")
         }
     } catch {
         print("Failed to read the file: \(error)")
     }
-
+    if usageDurations.count > 0 {
+        if !isFigmaApp(appName: usageDurations[0].appName) {
+            usageDurations.insert(UsageDuration(timeString: "00:00:00", appName: "Figma"), at: 0)
+        }
+        if isFigmaApp(appName: usageDurations[usageDurations.count-1].appName) {
+            usageDurations.append(UsageDuration(timeString: "23:59:59", appName: "END"))
+        }
+    }
+    return usageDurations
 }
 
 func getExistingDates () -> [String] {
@@ -219,6 +235,13 @@ func generateInitialUsageData () -> [UsageRecord] {
         currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
     }
     return initialData
+}
+
+func isFigmaApp (appName: String?) -> Bool {
+    if appName == nil {
+        return false
+    }
+    return appName == "Figma" || appName == "Figma Beta"
 }
 
 func getDateStr (date: Date) -> String {
