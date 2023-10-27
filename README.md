@@ -4,6 +4,16 @@ The Figma Activity Calendar is a menu application designed to monitor and track 
 
 <img alt="Screenshot of Figma Activity Calendar" src="images/screenshots.png" width="500">
 
+## Requirements
+Minimum macOS version 13.0.0 (Ventura)
+
+## Installation
+
+1. Download dmg file from [the release page](https://github.com/leadream/FigmaActivityCalendar/releases).
+2. Double click to open and drag the app to Applications folder.
+<img alt="Screenshot of Figma Activity Calendar" src="images/drag-to-applications.png" width="320">
+3. If you see a warning telling you that this is from an unidentified developer you can solve it by following [this instruction](https://support.apple.com/en-hk/guide/mac-help/mh40616/mac).
+
 ## How does it work?
 This app will monitor when you activate the Figma window and how much time you spend in it. It will render a heatmap from this data.
 
