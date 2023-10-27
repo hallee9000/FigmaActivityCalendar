@@ -46,6 +46,7 @@ struct ContentView: View {
                             ForEach(0..<7) { column in
                                 Tile(
                                     shape: shapes[row*7+column],
+//                                    color: randomColor(),
                                     color: getColorBySeconds(seconds: usageRecords[row*7+column].usageTime),
                                     text: getTooltipText(row: row, column: column, usageRecords: usageRecords)
                                 )
@@ -92,6 +93,17 @@ struct ContentView: View {
                 }
             }
         }
+    }
+    func randomColor () -> Color {
+        let index = Int.random(in: 0...4)
+        let colors = [
+            Color("level1"),
+            Color("level2"),
+            Color("level3"),
+            Color("level4"),
+            Color("level5")
+        ]
+        return colors[index]
     }
     func getColorBySeconds(seconds: Double) -> Color {
         if seconds < 60 { // less than 1 minutes

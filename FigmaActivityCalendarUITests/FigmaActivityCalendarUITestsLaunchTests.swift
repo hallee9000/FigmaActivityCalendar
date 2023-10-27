@@ -2,7 +2,7 @@
 //  FigmaActivityCalendarUITestsLaunchTests.swift
 //  FigmaActivityCalendarUITests
 //
-//  Created by 李俊 on 2023/10/24.
+//  Created by Hal on 2023/10/24.
 //
 
 import XCTest

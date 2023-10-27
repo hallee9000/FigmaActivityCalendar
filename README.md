@@ -2,7 +2,7 @@
 
 The Figma Activity Calendar is a menu application designed to monitor and track the amount of time you spend using Figma.
 
-<img alt="Screenshot of Figma Activity Calendar" src="images/screenshot.png" width="320">
+<img alt="Screenshot of Figma Activity Calendar" src="images/screenshots.png" width="500">
 
 ## How does it work?
 This app will monitor when you activate the Figma window and how much time you spend in it. It will render a heatmap from this data.

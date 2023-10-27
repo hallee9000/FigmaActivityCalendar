@@ -1,7 +1,27 @@
 {
   "images" : [
     {
-      "filename" : "FigmaActivityCalendarIcon-64.png",
+      "filename" : "Icon-1.png",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "filename" : "Icon-1 1.png",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "Icon.png",
       "idiom" : "universal"
     }
   ],
