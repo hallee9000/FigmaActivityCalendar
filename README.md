@@ -32,4 +32,5 @@ There are 5 levels for the color.
 - **Level5**: more than 6 hours
 
 ## Last
-[Follow me at Twitter](https://twitter.com/hal_lee_at_x)
+- [Follow me at Twitter](https://twitter.com/hal_lee_at_x)
+- [Follow me at Figma](https://figma.com/@hallee)
