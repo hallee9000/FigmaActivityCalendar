@@ -66,7 +66,7 @@ struct ContentView: View {
             }
             HStack {
                 Button(action: {
-                    openURL(URL(string: "https://github.com/leadream/FigmaActivityCalendar")!)
+                    openURL(URL(string: "https://github.com/leadream/FigmaActivityCalendar#figma-activity-calendar")!)
                 }) {
                     Image(systemName: "questionmark.circle")
                 }
