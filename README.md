@@ -10,8 +10,10 @@ Minimum macOS version 13.0.0 (Ventura)
 ## Installation
 
 1. Download dmg file from [the release page](https://github.com/leadream/FigmaActivityCalendar/releases).
+
 2. Double click to open and drag the app to Applications folder.
   <img alt="Screenshot of Figma Activity Calendar" src="images/drag-to-applications.png" width="320">
+
 3. If you see a warning telling you that this is from an unidentified developer you can solve it by following [this instruction](https://support.apple.com/en-hk/guide/mac-help/mh40616/mac).
 
 ## How does it work?
