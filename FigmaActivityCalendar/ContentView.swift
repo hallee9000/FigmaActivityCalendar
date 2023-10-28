@@ -11,7 +11,6 @@ import AppKit
 struct ContentView: View {
     @Environment(\.openURL) var openURL
     @State private var usageRecords:[UsageRecord] = []
-    @State private var shapes:[Int] = []
     @State private var name: String = "Figma Activity Calendar"
     let workspaceObserver = WorkspaceNotificationObserver()
     init () {
@@ -39,13 +38,13 @@ struct ContentView: View {
                 Spacer()
                 Popover(name: $name)
             }
-            if usageRecords.count > 0 && shapes.count > 0 {
+            if usageRecords.count > 0 {
                 HStack (spacing: 3) {
                     ForEach(0..<20) { row in
                         VStack (spacing: 3) {
                             ForEach(0..<7) { column in
                                 Tile(
-                                    shape: shapes[row*7+column],
+                                    shape: getShapeBySeconds(seconds: usageRecords[row*7+column].usageTime),
 //                                    color: randomColor(),
                                     color: getColorBySeconds(seconds: usageRecords[row*7+column].usageTime),
                                     text: getTooltipText(row: row, column: column, usageRecords: usageRecords)
@@ -84,7 +83,6 @@ struct ContentView: View {
             if (name != nil) {
                 self.name = name as! String
             }
-            shapes = getInitialShapes()
             NotificationCenter.default.addObserver(
                 forName: NSWindow.didChangeOcclusionStateNotification, object: nil, queue: nil
             ) { notification in
@@ -105,6 +103,19 @@ struct ContentView: View {
         ]
         return colors[index]
     }
+    func getShapeBySeconds(seconds: Double) -> Int {
+        if seconds < 60 { // less than 1 minutes
+            return 1
+        } else if seconds < 1800 { // less than 30 minutes
+            return 2
+        } else if seconds < 10800 { // less than 3 hours
+            return 3
+        } else if seconds < 21600 { // less than 6 hours
+            return 4
+        } else { // more than 6 hours
+            return 5
+        }
+    }
     func getColorBySeconds(seconds: Double) -> Color {
         if seconds < 60 { // less than 1 minutes
             return Color("level1")
@@ -117,13 +128,6 @@ struct ContentView: View {
         } else { // more than 6 hours
             return Color("level5")
         }
-    }
-    func getInitialShapes() -> [Int] {
-        var shapes = Array(repeating: 0, count: 140)
-        for i in 0..<shapes.count {
-            shapes[i] = Int.random(in: 1...4)
-        }
-        return shapes
     }
 }
 

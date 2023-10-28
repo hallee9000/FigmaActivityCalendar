@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct Tile: View {
-    @State private var shape1: [CGFloat] = [6, 6, 0, 0]
-    @State private var shape2: [CGFloat] = [0, 0, 6, 6]
-    @State private var shape3: [CGFloat] = [6, 6, 6, 6]
-    @State private var shape4: [CGFloat] = [6, 6, 6, 0]
+    @State private var shape1: [CGFloat] = [6, 6, 6, 6]
+    @State private var shape2: [CGFloat] = [6, 6, 6, 0]
+    @State private var shape3: [CGFloat] = [6, 6, 0, 0]
+    @State private var shape4: [CGFloat] = [0, 0, 6, 6]
+    @State private var shape5: [CGFloat] = [2, 2, 2, 2]
     let shape: Int
     let color: Color
     let text: String
@@ -28,6 +29,8 @@ struct Tile: View {
                 selectedShape = shape3
             case 4:
                 selectedShape = shape4
+            case 5:
+                selectedShape = shape5
             default:
                 selectedShape = shape1
         }
