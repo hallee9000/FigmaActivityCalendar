@@ -217,23 +217,34 @@ func getUsageRecords () -> [UsageRecord] {
     return []
 }
 
-func generateInitialUsageData () -> [UsageRecord] {
-    let calendar = Calendar.current
-    // 获取今天的日期
-    let today = Date()
-    // 计算 140 天之前的日期
+func generateInitialUsageData() -> [UsageRecord] {
+    var calendar = Calendar(identifier: .gregorian)
+    calendar.timeZone = TimeZone(identifier: "UTC")!
+    var lastDay = Date()
+
+    // 判断今天是否为周六，不是周六则修改最后一天为未来最接近的周六
+    let weekday = calendar.component(.weekday, from: lastDay )
+    if weekday != 7 {
+        var dateComponents = DateComponents()
+        dateComponents.day = 7 - weekday
+        lastDay = calendar.date(byAdding: dateComponents, to: lastDay) ?? lastDay
+    }
+
+    // 计算起始日期
     var dateComponents = DateComponents()
-    dateComponents.day = -140
-    guard let startDate = calendar.date(byAdding: dateComponents, to: today) else {
+    dateComponents.day = -139
+    guard let startDate = calendar.date(byAdding: dateComponents, to: lastDay) else {
         fatalError("无法计算起始日期")
     }
+
     var initialData: [UsageRecord] = []
     var currentDate = startDate
-    while currentDate <= today {
+    while currentDate <= lastDay {
         let item = UsageRecord(date: currentDate, usageTime: 0)
         initialData.append(item)
         currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
     }
+
     return initialData
 }
 
@@ -250,6 +261,12 @@ func getDateStr (date: Date) -> String {
     return dateFormatter.string(from: date)
 }
 
+func getWeekdayAbbreviation(_ date: Date) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "EEE"  // 设置日期格式为仅星期几的缩写
+    return dateFormatter.string(from: date)
+}
+
 func convertSecondsToHours (seconds: Double) -> String {
     let hours = seconds / 3600
     let formattedHours = String(format: "%.2f", hours)
@@ -257,9 +274,10 @@ func convertSecondsToHours (seconds: Double) -> String {
 }
 
 func getTooltipText (row: Int, column: Int, usageRecords: [UsageRecord]) -> String {
+    let weekday = getWeekdayAbbreviation(usageRecords[row*7+column].date)
     let date = getDateStr(date: usageRecords[row*7+column].date)
     let usageTime = convertSecondsToHours(seconds: usageRecords[row*7+column].usageTime)
-    return "\(date), \(usageTime) hours"
+    return "\(weekday), \(date), \(usageTime) hours"
 }
 
 func removeExt (fileName: String) -> String {
