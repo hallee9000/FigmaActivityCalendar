@@ -16,7 +16,9 @@
 		2BB850952AE7E4FC00037860 /* FigmaActivityCalendarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850942AE7E4FC00037860 /* FigmaActivityCalendarUITestsLaunchTests.swift */; };
 		2BB850A22AE7E56A00037860 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850A12AE7E56A00037860 /* Tile.swift */; };
 		2BB850A42AE7E5B400037860 /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850A32AE7E5B400037860 /* Tooltip.swift */; };
-		2BB850A62AE7E60500037860 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850A52AE7E60500037860 /* utils.swift */; };
+		2BB850A62AE7E60500037860 /* appObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850A52AE7E60500037860 /* appObserver.swift */; };
+		2BD9854F2AEFDA9D00EE6DE4 /* usageScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9854E2AEFDA9D00EE6DE4 /* usageScheduler.swift */; };
+		2BD985512AEFDBE900EE6DE4 /* shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD985502AEFDBE900EE6DE4 /* shared.swift */; };
 		2BFE41982AE91418005764F4 /* Popover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE41972AE91418005764F4 /* Popover.swift */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +53,9 @@
 		2BB850942AE7E4FC00037860 /* FigmaActivityCalendarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaActivityCalendarUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2BB850A12AE7E56A00037860 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
 		2BB850A32AE7E5B400037860 /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
-		2BB850A52AE7E60500037860 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		2BB850A52AE7E60500037860 /* appObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appObserver.swift; sourceTree = "<group>"; };
+		2BD9854E2AEFDA9D00EE6DE4 /* usageScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usageScheduler.swift; sourceTree = "<group>"; };
+		2BD985502AEFDBE900EE6DE4 /* shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shared.swift; sourceTree = "<group>"; };
 		2BFE41972AE91418005764F4 /* Popover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popover.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,7 +111,9 @@
 				2BB850A12AE7E56A00037860 /* Tile.swift */,
 				2BFE41972AE91418005764F4 /* Popover.swift */,
 				2BB850A32AE7E5B400037860 /* Tooltip.swift */,
-				2BB850A52AE7E60500037860 /* utils.swift */,
+				2BB850A52AE7E60500037860 /* appObserver.swift */,
+				2BD9854E2AEFDA9D00EE6DE4 /* usageScheduler.swift */,
+				2BD985502AEFDBE900EE6DE4 /* shared.swift */,
 				2BB850782AE7E4FB00037860 /* ContentView.swift */,
 				2BB8507A2AE7E4FC00037860 /* Assets.xcassets */,
 				2BB8507F2AE7E4FC00037860 /* FigmaActivityCalendar.entitlements */,
@@ -271,11 +277,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BB850A62AE7E60500037860 /* utils.swift in Sources */,
+				2BD9854F2AEFDA9D00EE6DE4 /* usageScheduler.swift in Sources */,
+				2BB850A62AE7E60500037860 /* appObserver.swift in Sources */,
 				2BFE41982AE91418005764F4 /* Popover.swift in Sources */,
 				2BB850A22AE7E56A00037860 /* Tile.swift in Sources */,
 				2BB850792AE7E4FB00037860 /* ContentView.swift in Sources */,
 				2BB850772AE7E4FB00037860 /* FigmaActivityCalendarApp.swift in Sources */,
+				2BD985512AEFDBE900EE6DE4 /* shared.swift in Sources */,
 				2BB850A42AE7E5B400037860 /* Tooltip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

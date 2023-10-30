@@ -12,7 +12,7 @@ struct FigmaActivityCalendar: App {
     var body: some Scene {
         MenuBarExtra(content: {
             ContentView()
-                .background(Color("BaclgroundColor"))
+                .background(Color("BackgroundColor"))
         }, label: {
             let image: NSImage = {
                 let ratio = $0.size.height / $0.size.width

@@ -20,9 +20,8 @@ struct ContentView: View {
             name: NSWorkspace.didActivateApplicationNotification,
             object: nil
         )
-    }
-    func initializeData () {
-        self.usageRecords = getUsageRecords()
+        let usageStatsScheduler = UsageStatsScheduler()
+        usageStatsScheduler.start()
     }
     func terminate () {
         workspaceObserver.handleTerminate()
@@ -87,21 +86,12 @@ struct ContentView: View {
                 forName: NSWindow.didChangeOcclusionStateNotification, object: nil, queue: nil
             ) { notification in
                 if (notification.object as! NSWindow).isVisible {
-                    initializeData()
+                    self.usageRecords = getUsageRecords()
+                    // 每次打开也更新一下
+                    updateUsageData()
                 }
             }
         }
-    }
-    func randomColor () -> Color {
-        let index = Int.random(in: 0...4)
-        let colors = [
-            Color("level1"),
-            Color("level2"),
-            Color("level3"),
-            Color("level4"),
-            Color("level5")
-        ]
-        return colors[index]
     }
     func getShapeBySeconds(seconds: Double) -> Int {
         if seconds < 60 { // less than 1 minutes
@@ -129,9 +119,26 @@ struct ContentView: View {
             return Color("level5")
         }
     }
+    func getWeekdayAbbreviation(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEE"  // 设置日期格式为仅星期几的缩写
+        return dateFormatter.string(from: date)
+    }
+
+    func convertSecondsToHours (seconds: Double) -> String {
+        let hours = seconds / 3600
+        let formattedHours = String(format: "%.2f", hours)
+        return formattedHours
+    }
+
+    func getTooltipText (row: Int, column: Int, usageRecords: [UsageRecord]) -> String {
+        let weekday = getWeekdayAbbreviation(usageRecords[row*7+column].date)
+        let date = getDateStr(date: usageRecords[row*7+column].date)
+        let usageTime = convertSecondsToHours(seconds: usageRecords[row*7+column].usageTime)
+        return "\(weekday), \(date), \(usageTime) hours"
+    }
 }
 
 #Preview {
     ContentView()
 }
-
