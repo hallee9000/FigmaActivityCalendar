@@ -65,21 +65,28 @@ func updateTodayUsageData (fileName: String) {
     let usageDurations = getUsageDurationsFromCSV(fileName: fileName, shouldAppendEnd: false)
     let usageFile = getDocumentsDirectory().appendingPathComponent("usage.csv")
     let usageContent = getOneDayUsageContent(fileName: fileName, usageDurations: usageDurations)
-    // 读取 CSV 文件内容
+    var hasTodayData = false
     do {
         let fileContents = try String(contentsOfFile: usageFile.path, encoding: .utf8)
         // 将文件内容按行拆分
         var lines = fileContents.components(separatedBy: .newlines)
         for (index, line) in lines.enumerated() {
             if line.hasPrefix(removeExt(fileName: fileName)) {
-                lines[index] = usageContent
+                let filteredUsageContent = usageContent.replacingOccurrences(of: "\n", with: "")
+                lines[index] = filteredUsageContent
+                hasTodayData = true
                 break
             }
         }
-        // 将修改后的内容拼接回字符串
-        let updatedFileContents = lines.joined(separator: "\n")
-        // 将修改后的内容写回到文件
-        try updatedFileContents.write(to: usageFile, atomically: true, encoding: .utf8)
+        if !hasTodayData {
+            // 追加
+            calcFigmaUsageTime(fileName: fileName)
+        } else {
+            // 将修改后的内容拼接回字符串
+            let updatedFileContents = lines.joined(separator: "\n")
+            // 将修改后的内容写回到文件
+            try updatedFileContents.write(to: usageFile, atomically: true, encoding: .utf8)
+        }
     } catch {
         print("Failed to read the file: \(error)")
     }
