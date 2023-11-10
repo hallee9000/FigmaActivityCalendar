@@ -15,7 +15,6 @@
 		2BB850932AE7E4FC00037860 /* FigmaActivityCalendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850922AE7E4FC00037860 /* FigmaActivityCalendarUITests.swift */; };
 		2BB850952AE7E4FC00037860 /* FigmaActivityCalendarUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850942AE7E4FC00037860 /* FigmaActivityCalendarUITestsLaunchTests.swift */; };
 		2BB850A22AE7E56A00037860 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850A12AE7E56A00037860 /* Tile.swift */; };
-		2BB850A42AE7E5B400037860 /* Tooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850A32AE7E5B400037860 /* Tooltip.swift */; };
 		2BB850A62AE7E60500037860 /* appObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850A52AE7E60500037860 /* appObserver.swift */; };
 		2BD9854F2AEFDA9D00EE6DE4 /* usageScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9854E2AEFDA9D00EE6DE4 /* usageScheduler.swift */; };
 		2BD985512AEFDBE900EE6DE4 /* shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD985502AEFDBE900EE6DE4 /* shared.swift */; };
@@ -52,7 +51,6 @@
 		2BB850922AE7E4FC00037860 /* FigmaActivityCalendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaActivityCalendarUITests.swift; sourceTree = "<group>"; };
 		2BB850942AE7E4FC00037860 /* FigmaActivityCalendarUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaActivityCalendarUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2BB850A12AE7E56A00037860 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
-		2BB850A32AE7E5B400037860 /* Tooltip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tooltip.swift; sourceTree = "<group>"; };
 		2BB850A52AE7E60500037860 /* appObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appObserver.swift; sourceTree = "<group>"; };
 		2BD9854E2AEFDA9D00EE6DE4 /* usageScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usageScheduler.swift; sourceTree = "<group>"; };
 		2BD985502AEFDBE900EE6DE4 /* shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shared.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 				2BB850762AE7E4FB00037860 /* FigmaActivityCalendarApp.swift */,
 				2BB850A12AE7E56A00037860 /* Tile.swift */,
 				2BFE41972AE91418005764F4 /* Popover.swift */,
-				2BB850A32AE7E5B400037860 /* Tooltip.swift */,
 				2BB850A52AE7E60500037860 /* appObserver.swift */,
 				2BD9854E2AEFDA9D00EE6DE4 /* usageScheduler.swift */,
 				2BD985502AEFDBE900EE6DE4 /* shared.swift */,
@@ -163,6 +160,8 @@
 			dependencies = (
 			);
 			name = FigmaActivityCalendar;
+			packageProductDependencies = (
+			);
 			productName = FigmaActivityCalendar;
 			productReference = 2BB850732AE7E4FB00037860 /* FigmaActivityCalendar.app */;
 			productType = "com.apple.product-type.application";
@@ -235,6 +234,8 @@
 				Base,
 			);
 			mainGroup = 2BB8506A2AE7E4FB00037860;
+			packageReferences = (
+			);
 			productRefGroup = 2BB850742AE7E4FB00037860 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,7 +285,6 @@
 				2BB850792AE7E4FB00037860 /* ContentView.swift in Sources */,
 				2BB850772AE7E4FB00037860 /* FigmaActivityCalendarApp.swift in Sources */,
 				2BD985512AEFDBE900EE6DE4 /* shared.swift in Sources */,
-				2BB850A42AE7E5B400037860 /* Tooltip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

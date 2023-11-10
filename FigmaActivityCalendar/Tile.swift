@@ -13,6 +13,7 @@ struct Tile: View {
     @State private var shape3: [CGFloat] = [6, 6, 0, 0]
     @State private var shape4: [CGFloat] = [0, 0, 6, 6]
     @State private var shape5: [CGFloat] = [2, 2, 2, 2]
+    @State var isShowingPopover = false
     let shape: Int
     let color: Color
     let text: String
@@ -44,7 +45,16 @@ struct Tile: View {
         )
             .frame(width: 12, height: 12)
             .foregroundColor(color)
-            .toolTip(text)
+            .onTapGesture {
+                self.isShowingPopover = true
+            }
+            .popover(
+                isPresented: $isShowingPopover
+            ) {
+                Text(text)
+                    .padding(.vertical, 12)
+                    .padding(.horizontal, 16)
+            }
     }
 }
 
