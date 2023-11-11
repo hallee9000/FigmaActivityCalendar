@@ -18,7 +18,8 @@
 		2BB850A62AE7E60500037860 /* appObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850A52AE7E60500037860 /* appObserver.swift */; };
 		2BD9854F2AEFDA9D00EE6DE4 /* usageScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD9854E2AEFDA9D00EE6DE4 /* usageScheduler.swift */; };
 		2BD985512AEFDBE900EE6DE4 /* shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD985502AEFDBE900EE6DE4 /* shared.swift */; };
-		2BFE41982AE91418005764F4 /* Popover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE41972AE91418005764F4 /* Popover.swift */; };
+		2BFDF44E2AFE6E0C00294560 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFDF44D2AFE6E0C00294560 /* Header.swift */; };
+		2BFE41982AE91418005764F4 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFE41972AE91418005764F4 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +55,9 @@
 		2BB850A52AE7E60500037860 /* appObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appObserver.swift; sourceTree = "<group>"; };
 		2BD9854E2AEFDA9D00EE6DE4 /* usageScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usageScheduler.swift; sourceTree = "<group>"; };
 		2BD985502AEFDBE900EE6DE4 /* shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shared.swift; sourceTree = "<group>"; };
-		2BFE41972AE91418005764F4 /* Popover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popover.swift; sourceTree = "<group>"; };
+		2BFDF44D2AFE6E0C00294560 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		2BFDF44F2AFF85C100294560 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2BFE41972AE91418005764F4 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,13 +108,15 @@
 		2BB850752AE7E4FB00037860 /* FigmaActivityCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				2BFDF44F2AFF85C100294560 /* Info.plist */,
 				2BB850762AE7E4FB00037860 /* FigmaActivityCalendarApp.swift */,
 				2BB850A12AE7E56A00037860 /* Tile.swift */,
-				2BFE41972AE91418005764F4 /* Popover.swift */,
+				2BFE41972AE91418005764F4 /* Settings.swift */,
 				2BB850A52AE7E60500037860 /* appObserver.swift */,
 				2BD9854E2AEFDA9D00EE6DE4 /* usageScheduler.swift */,
 				2BD985502AEFDBE900EE6DE4 /* shared.swift */,
 				2BB850782AE7E4FB00037860 /* ContentView.swift */,
+				2BFDF44D2AFE6E0C00294560 /* Header.swift */,
 				2BB8507A2AE7E4FC00037860 /* Assets.xcassets */,
 				2BB8507F2AE7E4FC00037860 /* FigmaActivityCalendar.entitlements */,
 				2BB8507C2AE7E4FC00037860 /* Preview Content */,
@@ -278,9 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BFDF44E2AFE6E0C00294560 /* Header.swift in Sources */,
 				2BD9854F2AEFDA9D00EE6DE4 /* usageScheduler.swift in Sources */,
 				2BB850A62AE7E60500037860 /* appObserver.swift in Sources */,
-				2BFE41982AE91418005764F4 /* Popover.swift in Sources */,
+				2BFE41982AE91418005764F4 /* Settings.swift in Sources */,
 				2BB850A22AE7E56A00037860 /* Tile.swift in Sources */,
 				2BB850792AE7E4FB00037860 /* ContentView.swift in Sources */,
 				2BB850772AE7E4FB00037860 /* FigmaActivityCalendarApp.swift in Sources */,
@@ -451,6 +457,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FigmaActivityCalendar/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FigmaActivityCalendar/Info.plist;
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -478,6 +485,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FigmaActivityCalendar/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FigmaActivityCalendar/Info.plist;
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (

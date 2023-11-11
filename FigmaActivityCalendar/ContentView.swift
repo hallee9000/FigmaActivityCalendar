@@ -11,7 +11,6 @@ import AppKit
 struct ContentView: View {
     @Environment(\.openURL) var openURL
     @State private var usageRecords:[UsageRecord] = []
-    @State private var name: String = "Figma Activity Calendar"
     let workspaceObserver = WorkspaceNotificationObserver()
     init () {
         NSWorkspace.shared.notificationCenter.addObserver(
@@ -29,14 +28,7 @@ struct ContentView: View {
     }
     var body: some View {
         VStack (spacing: 8) {
-            HStack (spacing: 4) {
-                Image("TitleIcon")
-                    .resizable()
-                    .frame(width: 20, height: 20)
-                Text(name)
-                Spacer()
-                Popover(name: $name)
-            }
+            Header()
             if usageRecords.count > 0 {
                 HStack (spacing: 3) {
                     ForEach(0..<20) { row in
@@ -78,10 +70,6 @@ struct ContentView: View {
         }
         .padding()
         .onAppear {
-            let name = UserDefaults.standard.value(forKey: "Name")
-            if (name != nil) {
-                self.name = name as! String
-            }
             NotificationCenter.default.addObserver(
                 forName: NSWindow.didChangeOcclusionStateNotification, object: nil, queue: nil
             ) { notification in

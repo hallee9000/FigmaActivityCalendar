@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct FigmaActivityCalendar: App {
+    @State private var name: String = "Figma Activity Calendar"
     var body: some Scene {
         MenuBarExtra(content: {
             ContentView()
@@ -23,6 +24,11 @@ struct FigmaActivityCalendar: App {
 
             Image(nsImage: image)
         })
-        .menuBarExtraStyle(.window)
+            .menuBarExtraStyle(.window)
+        Window("Settings", id: "settings") {
+            Settings()
+                .frame(width: 320)
+        }
+            .windowResizability(.contentSize)
     }
 }
