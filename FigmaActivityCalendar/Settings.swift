@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Foundation
+import LaunchAtLogin
 
 struct Release: Codable {
     let html_url: String
@@ -25,6 +26,7 @@ struct Settings: View {
                 .bold()
             Text(version)
             Spacer()
+            LaunchAtLogin.Toggle()
             Button("Check for updates") {
                 Task {
                     await fetchData()
