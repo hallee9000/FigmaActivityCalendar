@@ -10,9 +10,12 @@ import AppKit
 
 struct ContentView: View {
     @Environment(\.openURL) var openURL
+    @ObservedObject var settings: UserSettings
     @State private var usageRecords:[UsageRecord] = []
+    @State private var colorIndex: Int = 3
     let workspaceObserver = WorkspaceNotificationObserver()
-    init () {
+    init (settings: UserSettings) {
+        self.settings = settings
         NSWorkspace.shared.notificationCenter.addObserver(
             workspaceObserver,
             selector: #selector(WorkspaceNotificationObserver.handleWorkspaceNotification(_:)),
@@ -80,31 +83,35 @@ struct ContentView: View {
                 }
             }
         }
+        .onReceive(settings.$value) { newValue in
+            // 当 value 变化时执行其他操作
+            self.colorIndex = newValue
+        }
     }
     func getShapeBySeconds(seconds: Double) -> Int {
         if seconds < 60 { // less than 1 minutes
-            return 1
+            return 0
         } else if seconds < 1800 { // less than 30 minutes
-            return 2
+            return 1
         } else if seconds < 10800 { // less than 3 hours
-            return 3
+            return 2
         } else if seconds < 21600 { // less than 6 hours
-            return 4
+            return 3
         } else { // more than 6 hours
-            return 5
+            return 4
         }
     }
     func getColorBySeconds(seconds: Double) -> Color {
         if seconds < 60 { // less than 1 minutes
-            return Color("level1")
+            return getColorByLevel(level: 0, colorIndex: self.colorIndex)
         } else if seconds < 1800 { // less than 30 minutes
-            return Color("level2")
+            return getColorByLevel(level: 1, colorIndex: self.colorIndex)
         } else if seconds < 10800 { // less than 3 hours
-            return Color("level3")
+            return getColorByLevel(level: 2, colorIndex: self.colorIndex)
         } else if seconds < 21600 { // less than 6 hours
-            return Color("level4")
+            return getColorByLevel(level: 3, colorIndex: self.colorIndex)
         } else { // more than 6 hours
-            return Color("level5")
+            return getColorByLevel(level: 4, colorIndex: self.colorIndex)
         }
     }
     func getWeekdayAbbreviation(_ date: Date) -> String {
@@ -128,5 +135,7 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(
+        settings: UserSettings(key: "ColorIndex")
+    )
 }

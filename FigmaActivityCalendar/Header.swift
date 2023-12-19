@@ -29,11 +29,19 @@ struct Header: View {
             }
             Spacer()
             Button(action: {
+                openWindow(id: "select-color")
+            }) {
+                Image(systemName: "paintpalette")
+            }
+                .buttonStyle(PlainButtonStyle())
+            Spacer()
+                .frame(width: 2)
+            Button(action: {
                 openWindow(id: "settings")
             }) {
                 Image(systemName: "gearshape")
             }
-            .buttonStyle(PlainButtonStyle())
+                .buttonStyle(PlainButtonStyle())
         }
         .onAppear {
             let name = UserDefaults.standard.value(forKey: "Name")

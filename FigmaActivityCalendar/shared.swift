@@ -94,3 +94,25 @@ func getDocumentsDirectory() -> URL {
     let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
     return paths[0]
 }
+
+func getColorByLevel (level: Int, colorIndex: Int) -> Color {
+    let opacityMaps: [Double] = [0.08, 0.2, 0.5, 0.8, 1]
+    let opacity: Double = opacityMaps[level]
+    let color: Color = colorPalette[colorIndex]
+    return color.opacity(opacity)
+}
+
+class UserSettings: ObservableObject {
+    @Published var value: Int {
+        didSet {
+            UserDefaults.standard.set(value, forKey: key)
+        }
+    }
+
+    var key: String
+
+    init(key: String) {
+        self.key = key
+        self.value = UserDefaults.standard.integer(forKey: key)
+    }
+}

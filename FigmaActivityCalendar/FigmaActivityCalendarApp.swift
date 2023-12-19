@@ -9,10 +9,11 @@ import SwiftUI
 
 @main
 struct FigmaActivityCalendar: App {
+    var settings = UserSettings(key: "ColorIndex")
     @State private var name: String = "Figma Activity Calendar"
     var body: some Scene {
         MenuBarExtra(content: {
-            ContentView()
+            ContentView(settings: settings)
                 .background(Color("BackgroundColor"))
         }, label: {
             let image: NSImage = {
@@ -28,6 +29,11 @@ struct FigmaActivityCalendar: App {
         Window("Settings", id: "settings") {
             Settings()
                 .frame(width: 320)
+        }
+            .windowResizability(.contentSize)
+        Window("SelectColor", id: "select-color") {
+            SelectColor(settings: settings)
+                .frame(width: 240, height: 240)
         }
             .windowResizability(.contentSize)
     }

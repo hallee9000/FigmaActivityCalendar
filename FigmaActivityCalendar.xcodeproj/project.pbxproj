@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B01DB0C2B30885B00DD11BC /* SelectColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B01DB0B2B30885B00DD11BC /* SelectColor.swift */; };
+		2B01DB0E2B3126EA00DD11BC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B01DB0D2B3126EA00DD11BC /* Constants.swift */; };
 		2BB850772AE7E4FB00037860 /* FigmaActivityCalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850762AE7E4FB00037860 /* FigmaActivityCalendarApp.swift */; };
 		2BB850792AE7E4FB00037860 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB850782AE7E4FB00037860 /* ContentView.swift */; };
 		2BB8507B2AE7E4FC00037860 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BB8507A2AE7E4FC00037860 /* Assets.xcassets */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B01DB0B2B30885B00DD11BC /* SelectColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectColor.swift; sourceTree = "<group>"; };
+		2B01DB0D2B3126EA00DD11BC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2BB850732AE7E4FB00037860 /* FigmaActivityCalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FigmaActivityCalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BB850762AE7E4FB00037860 /* FigmaActivityCalendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigmaActivityCalendarApp.swift; sourceTree = "<group>"; };
 		2BB850782AE7E4FB00037860 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				2BD985502AEFDBE900EE6DE4 /* shared.swift */,
 				2BB850782AE7E4FB00037860 /* ContentView.swift */,
 				2BFDF44D2AFE6E0C00294560 /* Header.swift */,
+				2B01DB0B2B30885B00DD11BC /* SelectColor.swift */,
+				2B01DB0D2B3126EA00DD11BC /* Constants.swift */,
 				2BB8507A2AE7E4FC00037860 /* Assets.xcassets */,
 				2BB8507F2AE7E4FC00037860 /* FigmaActivityCalendar.entitlements */,
 				2BB8507C2AE7E4FC00037860 /* Preview Content */,
@@ -291,6 +297,8 @@
 				2BD9854F2AEFDA9D00EE6DE4 /* usageScheduler.swift in Sources */,
 				2BB850A62AE7E60500037860 /* appObserver.swift in Sources */,
 				2BFE41982AE91418005764F4 /* Settings.swift in Sources */,
+				2B01DB0C2B30885B00DD11BC /* SelectColor.swift in Sources */,
+				2B01DB0E2B3126EA00DD11BC /* Constants.swift in Sources */,
 				2BB850A22AE7E56A00037860 /* Tile.swift in Sources */,
 				2BB850792AE7E4FB00037860 /* ContentView.swift in Sources */,
 				2BB850772AE7E4FB00037860 /* FigmaActivityCalendarApp.swift in Sources */,
@@ -548,6 +556,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.heronhq.FigmaActivityCalendarUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -564,6 +573,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.heronhq.FigmaActivityCalendarUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

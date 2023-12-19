@@ -1,5 +1,5 @@
 //
-//  Popover.swift
+//  Settings.swift
 //  FigmaActivityCalendar
 //
 //  Created by Hal on 2023/10/25.
@@ -15,7 +15,8 @@ struct Release: Codable {
 }
 
 struct Settings: View {
-    let version = "V1.1.0"
+    @Environment(\.openURL) var openURL
+    let version = "V1.2.0"
     @State private var latestLink: String = ""
     var body: some View {
         VStack () {
@@ -25,6 +26,9 @@ struct Settings: View {
             Text("Figma Activity Calendar")
                 .bold()
             Text(version)
+            Button("Buy me a coffee", systemImage: "cup.and.saucer.fill", action: {
+                openURL(URL(string: "https://www.buymeacoffee.com/hal__lee")!)
+            })
             Spacer()
             LaunchAtLogin.Toggle()
             Button("Check for updates") {
@@ -51,6 +55,7 @@ struct Settings: View {
             }
         }
         .padding(16)
+        .frame(maxHeight: .infinity)
     }
     private func fetchData() async {
         let repoName = "leadream/FigmaActivityCalendar"
