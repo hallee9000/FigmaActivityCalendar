@@ -95,11 +95,20 @@ func getDocumentsDirectory() -> URL {
     return paths[0]
 }
 
+func getGrayColor () -> Color {
+    let currentAppearance = NSApplication.shared.effectiveAppearance
+    if currentAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua {
+        return Color(red: 0.15, green: 0.15, blue: 0.15)
+    } else {
+        return Color(red: 0.95, green: 0.96, blue: 0.96)
+    }
+}
+
 func getColorByLevel (level: Int, colorIndex: Int) -> Color {
-    let opacityMaps: [Double] = [0.08, 0.2, 0.5, 0.8, 1]
+    let opacityMaps: [Double] = [0, 0.2, 0.5, 0.8, 1]
     let opacity: Double = opacityMaps[level]
     let color: Color = colorPalette[colorIndex]
-    return color.opacity(opacity)
+    return level==0 ? getGrayColor() : color.opacity(opacity)
 }
 
 class UserSettings: ObservableObject {

@@ -16,7 +16,7 @@ struct Release: Codable {
 
 struct Settings: View {
     @Environment(\.openURL) var openURL
-    let version = "V1.2.0"
+    let version = "V1.2.1"
     @State private var latestLink: String = ""
     var body: some View {
         VStack () {
